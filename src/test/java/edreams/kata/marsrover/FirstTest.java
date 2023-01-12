@@ -10,4 +10,10 @@ public class FirstTest {
     void walter_first_test() {
         assertEquals(1, 1);
     }
+
+    @Test
+    void davide_first_test() {
+        assertEquals(1, 1);
+    }
+
 }
