@@ -16,4 +16,8 @@ public class FirstTest {
         assertEquals(1, 1);
     }
 
+    @Test
+    void anahit_first_test() {
+        assertEquals(1, 1);
+    }
 }
