@@ -1,6 +1,30 @@
 # Mars Rover Kata
+See the following [link](https://www.codurance.com/katalyst/mars-rover)
 
-## Instructions
+## General rules
+
+### Driver order
+1. Davide
+2. Anahit
+3. Alex
+
+### If you're the Driver
+1. share the screen
+2. **Pull** from origin (rebase)
+3. write one test and make it pass, following instructions by the Navigators
+4. **Commit** and **Push**
+5. stop sharing the screen: next Driver takes turn
+
+### If you're a Navigator
+Describe your ideas to the others and to the Driver
+
+### Shortcuts
+**Pull**              Command + T           
+**Launch the tests**  Ctrl + Shift + R (the test(s) where your cursor is positioned), Ctrl + Shift + R (repeat the last execution)
+**Commit**            Command + K       
+**Push**              Command + Shift + K
+
+## Instructions to setup the environment
 
 1. **Update and Build**
    - Clone this repo on your local machine.
@@ -23,5 +47,5 @@
 Congratulations! You've just completed your first TDD cycle!
 
 ## Mars Rover Kata
-See the following [link](https://www.codurance.com/katalyst/mars-rover)
+
 
