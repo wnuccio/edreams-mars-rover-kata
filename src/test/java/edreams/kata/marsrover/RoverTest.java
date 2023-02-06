@@ -17,4 +17,23 @@ public class RoverTest {
         assertEquals("0:1:N", position);
     }
 
+    @Test
+    void no_movement_forward() {
+        String steps = "";
+        Rover rover = new Rover();
+
+        String position = rover.move(steps);
+
+        assertEquals("0:0:N", position);
+    }
+
+    @Test
+    void two_movement_forward() {
+        String steps = "MM";
+        Rover rover = new Rover();
+
+        String position = rover.move(steps);
+
+        assertEquals("0:2:N", position);
+    }
 }
