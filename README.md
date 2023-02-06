@@ -1,5 +1,7 @@
 # Mars Rover Kata
-See the following [link](https://www.codurance.com/katalyst/mars-rover)
+See here the [description](https://www.codurance.com/katalyst/mars-rover) of the Kata.
+
+For examples and reasoning, you can use this [grid](https://docs.google.com/spreadsheets/d/1jIlgjk02QiqoU2BpsCxVMWF4jSugSit7GpOOXq9fMEU/edit#gid=0).
 
 ## General rules
 
