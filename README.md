@@ -1,4 +1,4 @@
-# Mars Rover Kata
+# Mars edreams.kata.marsrover.Rover Kata
 See here the [description](https://www.codurance.com/katalyst/mars-rover) of the Kata.
 
 For examples and reasoning, you can use this [grid](https://docs.google.com/spreadsheets/d/1jIlgjk02QiqoU2BpsCxVMWF4jSugSit7GpOOXq9fMEU/edit#gid=0).
@@ -48,6 +48,6 @@ Describe your ideas to the others and to the Driver
    
 Congratulations! You've just completed your first TDD cycle!
 
-## Mars Rover Kata
+## Mars edreams.kata.marsrover.Rover Kata
 
 
