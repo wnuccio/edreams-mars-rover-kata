@@ -3,6 +3,7 @@ package edreams.kata.marsrover;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class RoverTest {
@@ -35,5 +36,10 @@ public class RoverTest {
         String position = rover.move(steps);
 
         assertEquals("0:2:N", position);
+    }
+
+    @Test
+    void trytest() {
+        assertTrue(true);
     }
 }
