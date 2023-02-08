@@ -39,11 +39,6 @@ public class RoverTest {
     }
 
     @Test
-    void trytest() {
-        assertTrue(true);
-    }
-
-    @Test
     void trytest2() {
         assertTrue(true);
     }
