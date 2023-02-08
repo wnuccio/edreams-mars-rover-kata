@@ -47,4 +47,9 @@ public class RoverTest {
     void trytest2() {
         assertTrue(true);
     }
+
+    @Test
+    void tryTest3() {
+        assertTrue(true);
+    }
 }
