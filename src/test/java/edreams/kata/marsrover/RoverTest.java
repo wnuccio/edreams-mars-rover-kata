@@ -37,10 +37,4 @@ public class RoverTest {
 
         assertEquals("0:2:N", position);
     }
-
-    @Test
-    void trytest2() {
-        assertTrue(true);
-    }
-
 }
