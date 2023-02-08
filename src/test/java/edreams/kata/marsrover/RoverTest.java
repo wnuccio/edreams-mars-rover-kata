@@ -29,7 +29,7 @@ public class RoverTest {
     }
 
     @Test
-    void two_movement_forward() {
+    void two_movements_forward() {
         String steps = "MM";
         Rover rover = new Rover();
 
@@ -37,4 +37,16 @@ public class RoverTest {
 
         assertEquals("0:2:N", position);
     }
+
+
+    @Test
+    void ten_movements_forward_should_go_back_to_start_position() {
+        String steps = "MMMMMMMMMM";
+        Rover rover = new Rover();
+
+        String position = rover.move(steps);
+
+        assertEquals("0:0:N", position);
+    }
+
 }
