@@ -8,6 +8,9 @@ public class Rover {
         if (steps.equals("L")) {
             return "0:0:W";
         }
+        if (steps.equals("LL")) {
+            return "0:0:S";
+        }
         return "0:" + steps.length() % GRID_LENGTH + ":N";
     }
 
