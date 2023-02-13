@@ -63,8 +63,6 @@ public class RoverTest {
         while (steps.length() < lengthS) {
             steps.append(symbol);
         }
-
         return steps.toString();
     }
-
 }
