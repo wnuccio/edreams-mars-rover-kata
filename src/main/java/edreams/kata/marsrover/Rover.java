@@ -3,15 +3,23 @@ package edreams.kata.marsrover;
 public class Rover {
 
     public static final int GRID_LENGTH = 10;
+    private String coordinates = "0:0";
 
     public String move(String steps) {
         if (steps.equals("L")) {
-            return "0:0:W";
+            return coordinates + ":W";
         }
         if (steps.equals("LL")) {
-            return "0:0:S";
+            return coordinates + ":S";
         }
-        return "0:" + steps.length() % GRID_LENGTH + ":N";
+        if (steps.equals("LLL")) {
+            return coordinates + ":E";
+        }
+        moveForward(steps);
+        return coordinates + ":N";
     }
 
+    private void moveForward(String steps) {
+        coordinates = "0:" +steps.length() % GRID_LENGTH;
+    }
 }
