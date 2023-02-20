@@ -98,6 +98,26 @@ public class RoverTest {
         assertEquals("0:0:N", position);
     }
 
+    @Test
+    void change_direction_left_five_times() {
+        String command = "LLLLL";
+        Rover rover = new Rover();
+
+        String position = rover.move(command);
+
+        assertEquals("0:0:W", position);
+    }
+
+    @Test
+    void change_direction_to_right() {
+        String command = "R";
+        Rover rover = new Rover();
+
+        String position = rover.move(command);
+
+        assertEquals("0:0:E", position);
+    }
+
     private String generateString(String symbol, int lengthS) {
         StringBuilder commands = new StringBuilder(symbol);
         while (commands.length() < lengthS) {

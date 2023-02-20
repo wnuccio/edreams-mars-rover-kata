@@ -11,6 +11,9 @@ public class Rover {
         if (steps.contains("L")) {
             rotateLeft(steps);
         }
+        if (steps.contains("R")) {
+            rotateRight(steps);
+        }
         if (steps.contains("M")) {
             moveForward(steps);
         }
@@ -33,6 +36,15 @@ public class Rover {
         }
         if (steps.equals("LLLL")) {
             orientation = "N";
+        }
+        if (steps.equals("LLLLL")) {
+            orientation = "W";
+        }
+    }
+
+    private void rotateRight(String steps) {
+        if (steps.equals("R")) {
+            orientation = "E";
         }
     }
 }
