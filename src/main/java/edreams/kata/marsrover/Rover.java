@@ -1,9 +1,11 @@
 package edreams.kata.marsrover;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Rover {
 
     public static final int GRID_LENGTH = 10;
-
     private String coordinates = "0:0";
     private String orientation = "N";
 
@@ -25,20 +27,14 @@ public class Rover {
     }
 
     private void rotateLeft(String steps) {
-        if (steps.equals("L")) {
-            orientation = "W";
-        }
-        if (steps.equals("LL")) {
-            orientation = "S";
-        }
-        if (steps.equals("LLL")) {
-            orientation = "E";
-        }
-        if (steps.equals("LLLL")) {
-            orientation = "N";
-        }
-        if (steps.equals("LLLLL")) {
-            orientation = "W";
+        Map<String, String> nextOrientations = new HashMap<>();
+        nextOrientations.put("N", "W");
+        nextOrientations.put("W", "S");
+        nextOrientations.put("S", "E");
+        nextOrientations.put("E", "N");
+
+        for (int i = 0; i < steps.length(); i++) {
+            orientation = nextOrientations.get(orientation);
         }
     }
 
