@@ -43,6 +43,7 @@ public class Rover {
         nextOrientations.put("N", "E");
         nextOrientations.put("E", "S");
         nextOrientations.put("S", "W");
+        nextOrientations.put("W", "N");
 
         for (int i = 0; i < steps.length(); i++) {
             orientation = nextOrientations.get(orientation);
