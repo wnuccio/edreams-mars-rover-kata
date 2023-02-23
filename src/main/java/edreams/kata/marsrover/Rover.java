@@ -6,24 +6,36 @@ import java.util.Map;
 public class Rover {
 
     public static final int GRID_LENGTH = 10;
+    private int y = 0;
     private String coordinates = "0:0";
     private String orientation = "N";
 
     public String move(String steps) {
-        if (steps.contains("L")) {
-            rotateLeft(steps);
+        for (char command: steps.toCharArray()) {
+            processCommand(String.valueOf(command));
         }
-        if (steps.contains("R")) {
-            rotateRight(steps);
-        }
-        if (steps.contains("M")) {
-            moveForward(steps);
-        }
+        // processCommand(String.valueOf(steps));
         return coordinates + ":" + orientation;
     }
 
-    private void moveForward(String steps) {
-        coordinates = "0:" + steps.length() % GRID_LENGTH;
+    private void processCommand(String command) {
+        if (command.equals("L")) {
+            rotateLeft(command);
+        }
+        if (command.equals("R")) {
+            rotateRight(command);
+        }
+        if (command.equals("M")) {
+            moveForward();
+        }
+    }
+
+    private void moveForward() {
+        y++;
+        if (y >= GRID_LENGTH) {
+            y = 0;
+        }
+        coordinates = "0:" + y;
     }
 
     private void rotateLeft(String steps) {

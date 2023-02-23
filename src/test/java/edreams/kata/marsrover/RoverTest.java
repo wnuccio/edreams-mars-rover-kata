@@ -158,6 +158,16 @@ public class RoverTest {
         assertEquals("0:0:E", position);
     }
 
+    @Test
+    void move_forward_and_rotate_left() {
+        String command = "ML";
+        Rover rover = new Rover();
+
+        String position = rover.move(command);
+
+        assertEquals("0:1:W", position);
+    }
+
     private String generateString(String symbol, int lengthS) {
         StringBuilder commands = new StringBuilder(symbol);
         while (commands.length() < lengthS) {
