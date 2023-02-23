@@ -39,8 +39,13 @@ public class Rover {
     }
 
     private void rotateRight(String steps) {
-        if (steps.equals("R")) {
-            orientation = "E";
+        Map<String, String> nextOrientations = new HashMap<>();
+        nextOrientations.put("N", "E");
+        nextOrientations.put("E", "S");
+
+        for (int i = 0; i < steps.length(); i++) {
+            orientation = nextOrientations.get(orientation);
         }
     }
+
 }
