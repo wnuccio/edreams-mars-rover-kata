@@ -14,7 +14,6 @@ public class Rover {
         for (char command: steps.toCharArray()) {
             processCommand(String.valueOf(command));
         }
-        // processCommand(String.valueOf(steps));
         return coordinates + ":" + orientation;
     }
 
