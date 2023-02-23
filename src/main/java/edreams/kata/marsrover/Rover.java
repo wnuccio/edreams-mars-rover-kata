@@ -42,6 +42,7 @@ public class Rover {
         Map<String, String> nextOrientations = new HashMap<>();
         nextOrientations.put("N", "E");
         nextOrientations.put("E", "S");
+        nextOrientations.put("S", "W");
 
         for (int i = 0; i < steps.length(); i++) {
             orientation = nextOrientations.get(orientation);
