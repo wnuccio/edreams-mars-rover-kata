@@ -47,7 +47,7 @@ public class Rover {
             if (x >= GRID_LENGTH) {
                 x = 0;
             }
-        } else {
+        } else if (direction.equals("N")) {
             y++;
             if (y >= GRID_LENGTH) {
                 y = 0;
