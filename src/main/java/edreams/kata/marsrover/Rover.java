@@ -7,14 +7,14 @@ public class Rover {
 
     public static final int GRID_LENGTH = 10;
     private int y = 0;
-    private String coordinates = "0:0";
+    private int x = 0;
     private String orientation = "N";
 
     public String move(String steps) {
         for (char command: steps.toCharArray()) {
             processCommand(String.valueOf(command));
         }
-        return coordinates + ":" + orientation;
+        return x + ":" + y + ":" + orientation;
     }
 
     private void processCommand(String command) {
@@ -34,7 +34,6 @@ public class Rover {
         if (y >= GRID_LENGTH) {
             y = 0;
         }
-        coordinates = "0:" + y;
     }
 
     private void rotateLeft(String steps) {

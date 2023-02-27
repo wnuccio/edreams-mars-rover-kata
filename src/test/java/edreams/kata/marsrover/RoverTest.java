@@ -9,16 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class RoverTest {
 
     @Test
-    void one_movement_forward() {
-        String commands = "M";
-        Rover rover = new Rover();
-
-        String position = rover.move(commands);
-
-        assertEquals("0:1:N", position);
-    }
-
-    @Test
     void no_movement_forward() {
         String commands = "";
         Rover rover = new Rover();
@@ -26,6 +16,16 @@ public class RoverTest {
         String position = rover.move(commands);
 
         assertEquals("0:0:N", position);
+    }
+
+    @Test
+    void one_movement_forward() {
+        String commands = "M";
+        Rover rover = new Rover();
+
+        String position = rover.move(commands);
+
+        assertEquals("0:1:N", position);
     }
 
     @Test
