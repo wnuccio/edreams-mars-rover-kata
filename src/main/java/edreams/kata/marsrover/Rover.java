@@ -8,13 +8,25 @@ public class Rover {
     public static final int GRID_LENGTH = 10;
     private int y = 0;
     private int x = 0;
-    private String orientation = "N";
+    private String direction = "N";
 
     public String move(String steps) {
+        processAllCommands(steps);
+        return getState();
+    }
+
+    private String getState() {
+        return getPosition() + ":" + direction;
+    }
+
+    private String getPosition() {
+        return x + ":" + y;
+    }
+
+    private void processAllCommands(String steps) {
         for (char command: steps.toCharArray()) {
             processCommand(String.valueOf(command));
         }
-        return x + ":" + y + ":" + orientation;
     }
 
     private void processCommand(String command) {
@@ -44,7 +56,7 @@ public class Rover {
         nextOrientations.put("E", "N");
 
         for (int i = 0; i < steps.length(); i++) {
-            orientation = nextOrientations.get(orientation);
+            direction = nextOrientations.get(direction);
         }
     }
 
@@ -56,7 +68,7 @@ public class Rover {
         nextOrientations.put("W", "N");
 
         for (int i = 0; i < steps.length(); i++) {
-            orientation = nextOrientations.get(orientation);
+            direction = nextOrientations.get(direction);
         }
     }
 
