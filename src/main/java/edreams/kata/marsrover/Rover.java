@@ -52,6 +52,8 @@ public class Rover {
             if (y >= GRID_LENGTH) {
                 y = 0;
             }
+        } else if (direction.equals("W")) {
+            x--;
         }
     }
 
