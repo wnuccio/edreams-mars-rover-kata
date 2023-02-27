@@ -42,9 +42,16 @@ public class Rover {
     }
 
     private void moveForward() {
-        y++;
-        if (y >= GRID_LENGTH) {
-            y = 0;
+        if (direction.equals("E")) {
+            x++;
+            if (x >= GRID_LENGTH) {
+                x = 0;
+            }
+        } else {
+            y++;
+            if (y >= GRID_LENGTH) {
+                y = 0;
+            }
         }
     }
 
