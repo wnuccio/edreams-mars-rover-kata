@@ -50,6 +50,9 @@ public class Rover {
         }
         if (direction.equals("W")) {
             x--;
+            if (x < 0) {
+                x = GRID_LENGTH - 1;
+            }
         }
     }
 
