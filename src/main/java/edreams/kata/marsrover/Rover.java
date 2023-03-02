@@ -43,18 +43,22 @@ public class Rover {
 
     private void moveForward() {
         if (direction.equals("E")) {
-            x++;
-            if (x >= GRID_LENGTH) {
-                x = 0;
-            }
-        } else if (direction.equals("N")) {
-            y++;
-            if (y >= GRID_LENGTH) {
-                y = 0;
-            }
-        } else if (direction.equals("W")) {
+            x = increaseCoordinate(x);
+        }
+        if (direction.equals("N")) {
+            y = increaseCoordinate(y);
+        }
+        if (direction.equals("W")) {
             x--;
         }
+    }
+
+    private int increaseCoordinate(int coordinate) {
+        coordinate++;
+        if (coordinate >= GRID_LENGTH) {
+            return  0;
+        }
+        return coordinate;
     }
 
     private void rotateLeft(String steps) {
