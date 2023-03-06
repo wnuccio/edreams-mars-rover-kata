@@ -58,10 +58,11 @@ public class Rover {
 
     private int increaseCoordinate(int coordinate) {
         coordinate++;
-        if (coordinate >= GRID_LENGTH) {
-            return  0;
-        }
-        return coordinate;
+        return getValueForMaxBorderCrossed(coordinate);
+    }
+
+    private int getValueForMaxBorderCrossed(int coordinate) {
+        return coordinate >= GRID_LENGTH ? 0 : coordinate;
     }
 
     private void rotateLeft(String steps) {
