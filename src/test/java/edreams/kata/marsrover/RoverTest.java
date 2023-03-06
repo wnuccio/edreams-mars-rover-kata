@@ -39,7 +39,7 @@ public class RoverTest {
 
     @Test
     void ten_movements_forward_should_go_back_to_start_position() {
-        String commands = generateString("M", 10);
+        String commands = repeatCommand("M", 10);
 
         String position = rover.move(commands);
 
@@ -48,7 +48,7 @@ public class RoverTest {
 
     @Test
     void more_than_ten_movements_forward_wraps_around_the_grid() {
-        String commands = generateString("M", 12);
+        String commands = repeatCommand("M", 12);
 
         String position = rover.move(commands);
 
@@ -153,7 +153,7 @@ public class RoverTest {
         assertEquals("9:0:W", position);
     }
 
-    private String generateString(String symbol, int lengthS) {
+    private String repeatCommand(String symbol, int lengthS) {
         StringBuilder commands = new StringBuilder(symbol);
         while (commands.length() < lengthS) {
             commands.append(symbol);
