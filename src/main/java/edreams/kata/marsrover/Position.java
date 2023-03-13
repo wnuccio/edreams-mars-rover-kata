@@ -3,8 +3,8 @@ package edreams.kata.marsrover;
 public class Position {
     public static final int GRID_LENGTH = 10;
 
-    private int y = 0;
-    private int x = 0;
+    private int y;
+    private int x;
 
     public Position(int x, int y) {
         this.y = y;
