@@ -55,18 +55,18 @@ public class Rover {
 
     private int decreaseCoordinate(int coordinate) {
         coordinate--;
-        if (coordinate < 0) {
-            coordinate = GRID_LENGTH - 1;
-        }
-        return coordinate;
+        return fixCoordinateOutOfGreed(coordinate);
     }
 
     private int increaseCoordinate(int coordinate) {
         coordinate++;
-        return getNextCoordinateOrMaxBorderCrossedValue(coordinate);
+        return fixCoordinateOutOfGreed(coordinate);
     }
 
-    private int getNextCoordinateOrMaxBorderCrossedValue(int coordinate) {
+    private int fixCoordinateOutOfGreed(int coordinate) {
+        if (coordinate < 0) {
+            return GRID_LENGTH - 1;
+        }
         return coordinate >= GRID_LENGTH ? 0 : coordinate;
     }
 
