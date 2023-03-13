@@ -153,6 +153,13 @@ public class RoverTest {
         assertEquals("9:0:W", position);
     }
 
+    @Test
+    void move_to_north_and_come_back() {
+        String position = rover.move("MLLM");
+
+        assertEquals("0:0:S", position);
+    }
+
     private String repeatCommand(String symbol, int lengthS) {
         StringBuilder commands = new StringBuilder(symbol);
         while (commands.length() < lengthS) {

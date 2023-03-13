@@ -51,6 +51,9 @@ public class Rover {
         if (direction.equals("W")) {
             x = decreaseCoordinate(x);
         }
+        if (direction.equals("S")) {
+            y = decreaseCoordinate(y);
+        }
     }
 
     private int decreaseCoordinate(int coordinate) {
