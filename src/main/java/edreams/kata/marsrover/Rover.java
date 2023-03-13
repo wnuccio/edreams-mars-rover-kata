@@ -49,11 +49,16 @@ public class Rover {
             y = increaseCoordinate(y);
         }
         if (direction.equals("W")) {
-            x--;
-            if (x < 0) {
-                x = GRID_LENGTH - 1;
-            }
+            x = decreaseCoordinate(x);
         }
+    }
+
+    private int decreaseCoordinate(int coordinate) {
+        coordinate--;
+        if (coordinate < 0) {
+            coordinate = GRID_LENGTH - 1;
+        }
+        return coordinate;
     }
 
     private int increaseCoordinate(int coordinate) {

@@ -133,7 +133,7 @@ public class RoverTest {
     }
 
     @Test
-    void move_to_the_right() {
+    void move_to_the_right_move_forward() {
         String position = rover.move("RM");
 
         assertEquals("1:0:E", position);
