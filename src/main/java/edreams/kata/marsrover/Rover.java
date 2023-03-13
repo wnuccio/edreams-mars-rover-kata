@@ -8,6 +8,7 @@ public class Rover {
     public static final int GRID_LENGTH = 10;
     private int y = 0;
     private int x = 0;
+    private Position position = new Position(0, 0);
     private String direction = "N";
 
     public String move(String steps) {
@@ -44,6 +45,7 @@ public class Rover {
     private void moveForward() {
         if (direction.equals("E")) {
             x = increaseCoordinate(x);
+
         }
         if (direction.equals("N")) {
             y = increaseCoordinate(y);
