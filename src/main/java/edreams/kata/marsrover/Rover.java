@@ -21,10 +21,10 @@ public class Rover {
 
     private void processCommand(String command) {
         if (command.equals("L")) {
-            direction.rotateLeft(command);
+            direction.rotateLeft();
         }
         if (command.equals("R")) {
-            direction.rotateRight(command);
+            direction.rotateRight();
         }
         if (command.equals("M")) {
             position.moveForward(direction.asString());
