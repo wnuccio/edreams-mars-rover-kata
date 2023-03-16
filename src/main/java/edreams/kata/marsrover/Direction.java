@@ -6,29 +6,31 @@ import java.util.Map;
 public class Direction {
 
     private String direction;
+    private final Map<String, String> nextOrientationToLeft;
+    private final Map<String, String> nextOrientationToRight;
 
     public Direction(String direction) {
         this.direction = direction;
+
+        nextOrientationToLeft = new HashMap<>();
+        nextOrientationToLeft.put("N", "W");
+        nextOrientationToLeft.put("W", "S");
+        nextOrientationToLeft.put("S", "E");
+        nextOrientationToLeft.put("E", "N");
+
+        nextOrientationToRight = new HashMap<>();
+        nextOrientationToRight.put("N", "E");
+        nextOrientationToRight.put("E", "S");
+        nextOrientationToRight.put("S", "W");
+        nextOrientationToRight.put("W", "N");
     }
 
     void rotateLeft() {
-        Map<String, String> nextOrientations = new HashMap<>();
-        nextOrientations.put("N", "W");
-        nextOrientations.put("W", "S");
-        nextOrientations.put("S", "E");
-        nextOrientations.put("E", "N");
-
-        direction = nextOrientations.get(direction);
+        direction = nextOrientationToLeft.get(direction);
     }
 
     void rotateRight() {
-        Map<String, String> nextOrientations = new HashMap<>();
-        nextOrientations.put("N", "E");
-        nextOrientations.put("E", "S");
-        nextOrientations.put("S", "W");
-        nextOrientations.put("W", "N");
-
-        direction = nextOrientations.get(direction);
+        direction = nextOrientationToRight.get(direction);
     }
 
     public String asString() {
