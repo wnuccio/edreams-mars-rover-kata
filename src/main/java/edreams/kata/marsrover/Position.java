@@ -32,15 +32,15 @@ public class Position {
 
     private int decreaseCoordinate(int coordinate) {
         coordinate--;
-        return fixCoordinateOutOfGreed(coordinate);
+        return fixCoordinateOutOfGrid(coordinate);
     }
 
     private int increaseCoordinate(int coordinate) {
         coordinate++;
-        return fixCoordinateOutOfGreed(coordinate);
+        return fixCoordinateOutOfGrid(coordinate);
     }
 
-    private int fixCoordinateOutOfGreed(int coordinate) {
+    private int fixCoordinateOutOfGrid(int coordinate) {
         if (coordinate < 0) {
             return GRID_LENGTH - 1;
         }
