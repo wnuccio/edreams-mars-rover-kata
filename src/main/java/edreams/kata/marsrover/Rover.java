@@ -3,6 +3,7 @@ package edreams.kata.marsrover;
 public class Rover {
     private Position position = new Position(0, 0);
     private Direction direction = Direction.north();
+    private Movement movement = new Movement();
 
     public String move(String steps) {
         processAllCommands(steps);
@@ -27,7 +28,7 @@ public class Rover {
             direction.rotateRight();
         }
         if (command.equals("M")) {
-            position.moveForward(direction);
+            movement.moveForward(position, direction);
         }
     }
 }
