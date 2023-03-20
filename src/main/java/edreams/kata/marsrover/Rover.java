@@ -2,7 +2,7 @@ package edreams.kata.marsrover;
 
 public class Rover {
     private Position position = new Position(0, 0);
-    private Direction direction = new Direction("N");
+    private Direction direction = Direction.north();
 
     public String move(String steps) {
         processAllCommands(steps);

@@ -26,6 +26,21 @@ public class Position {
         }
     }
 
+
+    public void moveForward(Direction direction) {
+        if (direction.isEast()) {
+            x = increaseCoordinate(x);
+        }
+        if (direction.equals("N")) {
+            y = increaseCoordinate(y);
+        }
+        if (direction.equals("W")) {
+            x = decreaseCoordinate(x);
+        }
+        if (direction.equals("S")) {
+            y = decreaseCoordinate(y);
+        }
+    }
     public String asString() {
         return x + ":" + y;
     }

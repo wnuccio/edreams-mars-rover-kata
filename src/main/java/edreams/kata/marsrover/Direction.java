@@ -9,8 +9,8 @@ public class Direction {
     private final Map<String, String> nextOrientationToLeft;
     private final Map<String, String> nextOrientationToRight;
 
-    public Direction(String direction) {
-        this.direction = direction;
+    private Direction() {
+        this.direction = "N";
 
         nextOrientationToLeft = new HashMap<>();
         nextOrientationToLeft.put("N", "W");
@@ -35,5 +35,13 @@ public class Direction {
 
     public String asString() {
         return direction;
+    }
+
+    public boolean isEast() {
+        return this.direction.equals("E");
+    }
+
+    public static Direction north() {
+        return new Direction();
     }
 }
