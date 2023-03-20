@@ -27,7 +27,7 @@ public class Rover {
             direction.rotateRight();
         }
         if (command.equals("M")) {
-            position.moveForward(direction.asString());
+            position.moveForward(direction);
         }
     }
 }

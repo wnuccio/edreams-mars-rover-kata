@@ -2,8 +2,7 @@ package edreams.kata.marsrover;
 
 import java.util.HashMap;
 import java.util.Map;
-
-public class Direction {
+ class Direction {
 
     private String direction;
     private final Map<String, String> nextOrientationToLeft;
@@ -33,15 +32,27 @@ public class Direction {
         direction = nextOrientationToRight.get(direction);
     }
 
-    public String asString() {
+    String asString() {
         return direction;
     }
 
-    public boolean isEast() {
+    boolean isEast() {
         return this.direction.equals("E");
     }
 
-    public static Direction north() {
+    static Direction north() {
         return new Direction();
+    }
+
+    boolean isNorth() {
+        return this.direction.equals("N");
+    }
+
+    boolean isWest() {
+        return this.direction.equals("W");
+    }
+
+    boolean isSouth() {
+        return this.direction.equals("S");
     }
 }

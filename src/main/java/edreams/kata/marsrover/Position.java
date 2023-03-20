@@ -11,36 +11,21 @@ public class Position {
         this.x = x;
     }
 
-    public void moveForward(String direction) {
-        if (direction.equals("E")) {
-            x = increaseCoordinate(x);
-        }
-        if (direction.equals("N")) {
-            y = increaseCoordinate(y);
-        }
-        if (direction.equals("W")) {
-            x = decreaseCoordinate(x);
-        }
-        if (direction.equals("S")) {
-            y = decreaseCoordinate(y);
-        }
-    }
-
-
     public void moveForward(Direction direction) {
         if (direction.isEast()) {
             x = increaseCoordinate(x);
         }
-        if (direction.equals("N")) {
+        if (direction.isNorth()) {
             y = increaseCoordinate(y);
         }
-        if (direction.equals("W")) {
+        if (direction.isWest()) {
             x = decreaseCoordinate(x);
         }
-        if (direction.equals("S")) {
+        if (direction.isSouth()) {
             y = decreaseCoordinate(y);
         }
     }
+
     public String asString() {
         return x + ":" + y;
     }
