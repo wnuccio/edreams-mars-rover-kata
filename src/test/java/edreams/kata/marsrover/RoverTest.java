@@ -160,6 +160,13 @@ public class RoverTest {
         assertEquals("0:0:S", position);
     }
 
+    @Test
+    void move_without_obstacles() {
+        String position = rover.move("MMRMMLM");
+
+        assertEquals("2:3:N", position);
+    }
+
     private String repeatCommand(String symbol, int lengthS) {
         StringBuilder commands = new StringBuilder(symbol);
         while (commands.length() < lengthS) {
